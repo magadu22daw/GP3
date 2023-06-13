@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="face-api.js"></script>
+    <script src="js/commons.js"></script>
+
+    <script src="js/faceDetectionControls.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.css">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <style>
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .a{
+            text-align: center;
+            justify-content: center;
+ 
+        }
+    </style>
+</head>
+
+<body>
+    <div class="a">
+        <div class="row">
+            <div class="input-field ">
+                <input type="text" id="username">
+                <label for="username">Username</label>
+            </div>
+            <div id="error"></div>
+
+
+
+            <div class="input-field   ">
+                <button id="start" class="btn waves-effect waves-light" onclick="startVideoAndPlay()">Recognize
+                    face</button>
+            </div>
+
+
+
+            <div >
+                <div style="position: relative" class="margin">
+                    <video id="inputVideo" autoplay muted playsinline></video>
+                    <canvas id="overlay"></canvas>
+                </div>
+
+
+                <div id="progressBar">
+                    <div id="progress"></div>
+                </div>
+                <div id="message"></div>
+            </div>
+
+            <script src="js/register.js"></script>
+
+</body>
+
+</html>

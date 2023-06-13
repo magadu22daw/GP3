@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="face-api.js"></script>
+    <script src="js/commons.js"></script>
+    <script src="js/login.js"></script>
+    <script src="js/faceDetectionControls.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.css">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+
+    <style>
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .a{
+            text-align: center;
+            justify-content: center;
+ 
+        }
+    </style>
+</head>
+
+<body>
+    <div class="a">
+        <div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <input type="text" id="username" class="validate">
+                    <label for="username">Username</label>
+                </div>
+                <div id="error"></div>
+            </div>
+
+            <div class="row">
+                <div class="input-field col s12">
+                    <button id="verificar" class="btn waves-effect waves-light"
+                        onclick="startVideoAndPlay()">Verify face</button>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col s12">
+                    <div style="position: relative" class="margin">
+                        <video id="inputVideo" autoplay muted playsinline></video>
+                        <canvas id="overlay"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
